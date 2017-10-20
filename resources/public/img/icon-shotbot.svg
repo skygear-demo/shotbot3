@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="30px" viewBox="0 0 21 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.1 (33804) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 7 20.7343413 0 20.7343413 9 0 16"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20.7343413" height="16" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polygon id="path-3" points="0 14 20.7343413 7 20.7343413 16 0 23"></polygon>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20.7343413" height="16" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <polygon id="path-5" points="0 21 20.7343413 14 20.7343413 23 0 30"></polygon>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20.7343413" height="16" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="header" transform="translate(0.000000, -15.000000)" stroke-width="4">
+            <g id="Group" transform="translate(0.000000, 15.000000)">
+                <use id="Rectangle" stroke="#4386EA" mask="url(#mask-2)" xlink:href="#path-1"></use>
+                <use id="Rectangle" stroke="#6AD4BA" mask="url(#mask-4)" transform="translate(10.367171, 15.000000) scale(-1, 1) translate(-10.367171, -15.000000) " xlink:href="#path-3"></use>
+                <use id="Rectangle" stroke="#C0BCAB" mask="url(#mask-6)" xlink:href="#path-5"></use>
+            </g>
+        </g>
+    </g>
+</svg>

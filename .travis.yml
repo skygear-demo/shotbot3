@@ -1,0 +1,36 @@
+language: clojure
+jdk: oraclejdk8
+lein: 2.6.1
+
+script:
+  - lein garden once
+  - '[ "$TRAVIS_BRANCH" = "master" ]     && lein cljsbuild once staging    || true'
+  - '[ "$TRAVIS_BRANCH" = "production" ] && lein cljsbuild once production || true'
+
+before_deploy:
+  - git config --global user.email "travis.ci@shotbot.skygeario.com"
+  - git config --global user.name "Travis CI"
+  - echo "Host git.skygeario.com" >> ~/.ssh/config
+  - echo "  StrictHostKeyChecking no" >> ~/.ssh/config
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: lein deploy-skygear staging
+    on:
+      branch: master
+  - provider: script
+    skip_cleanup: true
+    script: lein deploy-skygear production
+    on:
+      branch: production
+  - provider: s3
+    bucket: app.shotbot.io
+    region: us-east-1
+    access_key_id: "[Masked]"
+    secret_access_key: "[Masked]"
+    local_dir: resources/public
+    skip_cleanup: true
+    on:
+      branch: production
+
